@@ -1,0 +1,17 @@
+<%= form_with(model: vino_cepa) do |form| %>
+  <% if vino_cepa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vino_cepa.errors.count, "error") %> prohibited this vino_cepa from being saved:</h2>
+
+      <ul>
+        <% vino_cepa.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
